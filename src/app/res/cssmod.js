@@ -47,3 +47,9 @@ export const gradientGallery=[{
     "linear-gradient(to right, #30cfd0, #330867)",
     "linear-gradient(to right, #667eea, #764ba2)",
   ];
+
+  export const tools = [
+    { name: "Box Shadow Generator", description: "Generate custom box shadows for your designs." },
+    { name: "Text Shadow Generator", description: "Add cool shadow effects to your text." },
+    { name: "Border Radius Generator", description: "Generate border-radius styles with ease." },
+  ];

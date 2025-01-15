@@ -70,3 +70,45 @@ body {
     transform: translateY(-100%);
   }
 }
+
+
+/* Animated Tool Container */
+.animated-tool-container {
+  position: relative;
+  overflow: hidden;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tool-animation {
+  position: absolute;
+  animation: slideInOut 4s ease-in-out infinite;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+/* Slide In and Out Animation */
+@keyframes slideInOut {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  90% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
