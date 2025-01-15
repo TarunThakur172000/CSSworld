@@ -37,7 +37,7 @@ const HomePage = () => {
         }}
       >
         <Container>
-          <h1>Welcome to CSS Generator</h1>
+          <h1>Welcome to CSS World</h1>
           <p>Create stunning gradients and CSS styles effortlessly!</p>
           <Button variant="light" size="lg" href="#gradient-generator">
             Start Creating
