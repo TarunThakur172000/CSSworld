@@ -34,7 +34,6 @@ const Navbar = () => {
       {/* Burger Menu for Mobile */}
       <div className=" hamburger-menu">
       <Menu 
-        customBurgerIcon={<img src="../app/res/Hamburger.svg"/>}
         isOpen={isMenuOpen} 
         onStateChange={handleMenuStateChange} 
         right
