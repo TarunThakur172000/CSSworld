@@ -46,7 +46,7 @@ const HomePage = () => {
         <Container>
           <h1>Welcome to CSS World</h1>
           <p>Create stunning gradients and CSS styles effortlessly!</p>
-          <Button variant="light" size="lg" href="#gradient-generator">
+          <Button variant="light" size="lg" href="/gradientcss">
             Start Creating
           </Button>
         </Container>
