@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { slide as Menu } from "react-burger-menu";
 import "../style/Navbar.css";
-
+import ham from '../app/res/Hamburger.svg'
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
@@ -34,6 +34,7 @@ const Navbar = () => {
       {/* Burger Menu for Mobile */}
       <div className=" hamburger-menu">
       <Menu 
+        customBurgerIcon={<img src="../app/res/Hamburger.svg"/>}
         isOpen={isMenuOpen} 
         onStateChange={handleMenuStateChange} 
         right
