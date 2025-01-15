@@ -46,16 +46,16 @@ body {
 }
 
 .scroll-box.top-to-bottom .gradient-preview {
-  animation: scroll-top-to-bottom 6s linear infinite;
+  animation: scroll-top-to-bottom 25s linear infinite;
 }
 
 .scroll-box.bottom-to-top .gradient-preview {
-  animation: scroll-bottom-to-top 6s linear infinite;
+  animation: scroll-bottom-to-top 25s linear infinite;
 }
 
 @keyframes scroll-top-to-bottom {
   0% {
-    transform: translateY(-100%);
+    transform: translateY(-800%);
   }
   100% {
     transform: translateY(100%);
@@ -67,7 +67,7 @@ body {
     transform: translateY(100%);
   }
   100% {
-    transform: translateY(-100%);
+    transform: translateY(-800%);
   }
 }
 

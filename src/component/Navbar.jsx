@@ -1,12 +1,22 @@
 // File: components/Navbar.js
-import React from 'react';
-import Link from 'next/link';
-import '../style/Navbar.css';
+"use client"; // Ensure this is included for Next.js apps
+import React, { useState } from "react";
+import Link from "next/link";
+import { slide as Menu } from "react-burger-menu";
+import "../style/Navbar.css";
 
-function Navbar() {
-  
+const Navbar = () => {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const handleMenuStateChange = (state) => {
+    setMenuOpen(state.isOpen);
+  };
+
   return (
-    <nav className="navbar">
+    <nav className="navbar" id="outer-container">
+      
+      
+     <div className="desktop-menu" style={{display:"flex",justifyContent:"space-between",width:"100%"}}>
       <div className="nav-brand">CSS World</div>
       <ul className="navbar-menu">
         <li><Link href="/" prefetch={true}>Home</Link></li>
@@ -20,8 +30,33 @@ function Navbar() {
         <li><Link href="/multiplecol" prefetch={true}>Multiple Columns</Link></li>
         <li><Link href="/filter" prefetch={true}>Filter</Link></li>
       </ul>
+      </div>
+      {/* Burger Menu for Mobile */}
+      <div className=" hamburger-menu">
+      <Menu 
+        isOpen={isMenuOpen} 
+        onStateChange={handleMenuStateChange} 
+        right
+        pageWrapId={ "page-wrap" } 
+        outerContainerId={ "outer-container" }
+      >
+        
+          
+        <Link href="/" prefetch={true} onClick={() => setMenuOpen(false)}>Home</Link>
+        <Link href="/boxshadow" prefetch={true} onClick={() => setMenuOpen(false)}>Box Shadow</Link>
+        <Link href="/textshadow" prefetch={true} onClick={() => setMenuOpen(false)}>Text Shadow</Link>
+        <Link href="/csscursor" prefetch={true} onClick={() => setMenuOpen(false)}>CSS Cursor</Link>
+        <Link href="/border" prefetch={true} onClick={() => setMenuOpen(false)}>Border</Link>
+        <Link href="/gradientcss" prefetch={true} onClick={() => setMenuOpen(false)}>Gradient CSS</Link>
+        <Link href="/transformcss" prefetch={true} onClick={() => setMenuOpen(false)}>Transform CSS</Link>
+        <Link href="/rgbanhexcolor" prefetch={true} onClick={() => setMenuOpen(false)}>RGBA & Hex Color</Link>
+        <Link href="/multiplecol" prefetch={true} onClick={() => setMenuOpen(false)}>Multiple Columns</Link>
+        <Link href="/filter" prefetch={true} onClick={() => setMenuOpen(false)}>Filter</Link>
+        
+      </Menu>
+      </div>
     </nav>
   );
-}
+};
 
 export default Navbar;

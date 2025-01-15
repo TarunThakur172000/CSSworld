@@ -106,7 +106,7 @@ const HomePage = () => {
                         margin: "auto",
                       }}
                     >
-                      gradient.name
+                      {gradient.name}
                     </p>
                   </div>
                 ))}
@@ -130,7 +130,7 @@ const HomePage = () => {
                         margin: "auto",
                       }}
                     >
-                      gradient.name
+                      {gradient.name}
                     </p>
                   </div>
                 ))}
