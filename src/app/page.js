@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Container, Navbar, Nav, Row, Col, Button } from "react-bootstrap";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import Title from 'react-vanilla-tilt'
 import { gradientGallery, gradients, tools } from "./res/cssmod";
 import Footer from "../component/Footer";
 
@@ -159,6 +159,98 @@ const HomePage = () => {
         </Row>
       </Container>
 
+      <Container >
+        <Row><h2 className="text-center">Tools</h2></Row>
+        <Row className="text-center mt-4">
+          
+          <Col sm 
+          data-aos="zoom-in"
+          data-aos-delay="100">
+            <Title  style={{}} className="my-4">
+        <Button variant="dark" size="lg" href="/boxshadow" className="p-5 w-100 btn-col">
+                  Box Shadow
+          </Button>
+          </Title>
+        </Col>
+        
+        <Col sm
+        data-aos="zoom-out"
+        data-aos-delay="100">
+          <Title  style={{}} className="my-4">
+        <Button variant="dark" size="lg"  href="/textshadow" className="p-5 w-100 btn-col">
+            Text Shadow
+          </Button>
+          </Title>
+        </Col>
+        <Col sm
+        data-aos="zoom-in"
+        data-aos-delay="100">
+          <Title  style={{}} className="my-4">
+        <Button variant="dark" size="lg" href="/csscursor" className="p-5 w-100 btn-col">
+            CSS cursor
+          </Button>
+          </Title>
+        </Col>
+        </Row>
+        <Row className="text-center mt-4">
+          <Col sm
+          data-aos="zoom-in"
+          data-aos-delay="100">
+            <Title  className="my-4" style={{}}>
+        <Button variant="dark" size="lg" href="/border" className="p-5  w-100 btn-col">
+            Border
+          </Button>
+          </Title>
+        </Col>
+        <Col sm
+        data-aos="zoom-out"
+        data-aos-delay="100">
+          <Title  style={{}} className="my-4">
+        <Button variant="dark" size="lg"  href="/gradientcss" className="p-5 w-100 btn-col">
+            Gradient Generator
+          </Button>
+          </Title>
+        </Col>
+        <Col sm
+        data-aos="zoom-in"
+        data-aos-delay="100">
+          <Title  style={{}} className="my-4">
+        <Button variant="dark" size="lg" href="/transformcss" className="p-5 w-100 btn-col">
+            Transform CSS
+          </Button>
+          </Title>
+        </Col>
+        </Row>
+        <Row className="text-center mt-4">
+          <Col sm
+          data-aos="zoom-in"
+          data-aos-delay="100">
+            <Title  style={{}} className="my-4">
+        <Button variant="dark" size="lg" href="/rgbanhexcolor" className="p-5 w-100 btn-col">
+            RGBA and HEX Color
+          </Button>
+          </Title>
+        </Col>
+        <Col sm
+        data-aos="zoom-out"
+        data-aos-delay="100">
+          <Title style={{}} className="my-4">
+        <Button variant="dark" size="lg"  href="/multiplecol" className="p-5 w-100 btn-col">
+            Multiple COL
+          </Button>
+          </Title>
+        </Col>
+        <Col sm
+        data-aos="zoom-in"
+        data-aos-delay="100">
+          <Title style={{}} className="my-4">
+        <Button variant="dark" size="lg" href="/filter" className="p-5 w-100 btn-col">
+            Image Filter
+          </Button>
+          </Title>
+        </Col>
+        </Row>
+      </Container>
       <Footer />
     </>
   );

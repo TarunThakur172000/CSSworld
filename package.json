@@ -18,6 +18,7 @@
     "react-dom": "^19.0.0",
     "react-notifications": "^1.7.4",
     "react-toastify": "^11.0.2",
+    "react-vanilla-tilt": "^1.0.0",
     "styled-components": "^6.1.14"
   },
   "devDependencies": {

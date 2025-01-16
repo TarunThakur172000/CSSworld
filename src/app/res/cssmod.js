@@ -51,5 +51,12 @@ export const gradientGallery=[{
   export const tools = [
     { name: "Box Shadow Generator", description: "Generate custom box shadows for your designs." },
     { name: "Text Shadow Generator", description: "Add cool shadow effects to your text." },
-    { name: "Border Radius Generator", description: "Generate border-radius styles with ease." },
+    { name: "Border Radius Generator", description: "Easily create rounded corners for your elements." },
+    { name: "Cursor CSS Generator", description: "Customize the appearance of cursors for your website." },
+    { name: "Border Generator", description: "Generate and style borders for your elements." },
+    { name: "Gradient Generator", description: "Create beautiful CSS gradients for your designs." },
+    { name: "Transform CSS Generator", description: "Apply transformations like rotate, scale, and skew to elements." },
+    { name: "RGBA & HEX Generator", description: "Convert and generate color codes in RGBA or HEX formats." },
+    { name: "Image Filter Generator", description: "Apply CSS filters to images like blur, brightness, and contrast." }
   ];
+  

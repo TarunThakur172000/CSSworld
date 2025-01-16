@@ -42,7 +42,7 @@ const Navbar = () => {
       >
         
           
-        <Link href="/" prefetch={true} onClick={() => setMenuOpen(false)}>Home</Link>
+        <Link href="/" prefetch={true} onClick={() => setMenuOpen(false)} >Home</Link>
         <Link href="/boxshadow" prefetch={true} onClick={() => setMenuOpen(false)}>Box Shadow</Link>
         <Link href="/textshadow" prefetch={true} onClick={() => setMenuOpen(false)}>Text Shadow</Link>
         <Link href="/csscursor" prefetch={true} onClick={() => setMenuOpen(false)}>CSS Cursor</Link>
