@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import { Col, Container, Row, Button } from 'react-bootstrap';
+import { Col, Container, Row, Button, Card } from 'react-bootstrap';
 import { ToastContainer, toast } from "react-toastify";
 const TextShadow = () => {
   const [horizontal, setHorizontal] = useState(10);
@@ -127,6 +127,133 @@ const TextShadow = () => {
           </div>
         </Col>
       </Row>
+
+      <Container className='mt-5 pt-5'>
+      <h1 className='text-center mb-3'>Text Shadow: Add Depth and Style to Your Text</h1>
+      <p>
+        <strong>Text Shadow</strong> is a CSS property that allows you to add shadows to text elements. This property adds depth and can make your text stand out on web pages, enhancing readability and aesthetic appeal.
+      </p>
+
+      <h2>Why is Text Shadow Important?</h2>
+      <p>
+        Just like with box shadows, text shadows help distinguish text from its background and create a more dynamic, attractive look. When used correctly, text shadows can make headings, buttons, and links pop.
+      </p>
+
+      <ul style={{ listStyleType: "circle" }}>
+        <li>Text with shadows appears more pronounced and visually appealing.</li>
+        <li>Text shadows help improve text visibility against varying backgrounds.</li>
+        <li>Subtle text shadows can make text look like it’s floating or glowing.</li>
+      </ul>
+
+      <h2>How to Use Text Shadow in CSS</h2>
+      <p>The basic syntax of the <code>text-shadow</code> property looks like this:</p>
+      <pre>
+        <code>
+          {`element {
+  text-shadow: offset-x offset-y blur-radius color;
+}`}
+        </code>
+      </pre>
+
+      <p><strong>Here’s a breakdown:</strong></p>
+      <ul style={{ listStyleType: "circle" }}>
+        <li><strong>offset-x</strong>: Horizontal shadow position (positive = right, negative = left).</li>
+        <li><strong>offset-y</strong>: Vertical shadow position (positive = down, negative = up).</li>
+        <li><strong>blur-radius</strong>: The level of blurriness of the shadow (optional).</li>
+        <li><strong>color</strong>: The color of the shadow (can include opacity).</li>
+      </ul>
+
+      <h3>Examples</h3>
+      <Row>
+        <Col className='border-dark border p-3 my-3'>
+          <h4>Basic Example</h4>
+          <pre>
+            <code>
+              {`.heading {
+  font-size: 36px;
+  color: #333;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}`}
+            </code>
+          </pre>
+        </Col>
+
+        <Col className='border-dark border p-3 my-3'>
+          <h4>Multiple Shadows</h4>
+          <pre>
+            <code>
+              {`.title {
+  font-size: 48px;
+  color: #fff;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4), -3px -3px 5px rgba(255, 255, 255, 0.4);
+}`}
+            </code>
+          </pre>
+        </Col>
+
+        <Col className='border-dark border p-3 my-3'>
+          <h4>Glowing Text Shadow</h4>
+          <pre>
+            <code>
+              {`.glow {
+  font-size: 40px;
+  color: #0ff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}`}
+            </code>
+          </pre>
+        </Col>
+      </Row>
+
+      <h3>Tips for Using Text Shadow</h3>
+      <ul style={{ listStyleType: "circle" }}>
+        <li>Use text shadows sparingly to avoid distracting from the content.</li>
+        <li>Experiment with different blur-radius and colors for glowing effects.</li>
+        <li>Consider accessibility; text shadows can help with readability but should not overpower the content.</li>
+        <li>Use lighter shadows for a subtle effect and darker shadows for stronger emphasis.</li>
+      </ul>
+
+      <h3 className='text-center'>Advanced Techniques</h3>
+      <h4>Soft Shadows</h4>
+      <p>Increase the blur-radius and reduce opacity for a gentle shadow effect that doesn’t overpower the text.</p>
+
+      <h4>3D Text Effects</h4>
+      <p>Layer multiple shadows to create a 3D-like effect, making text appear to have more depth.</p>
+
+      <h4>Hover Effects</h4>
+      <pre>
+        <code>
+          {`.button:hover {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}`}
+        </code>
+      </pre>
+
+      <h3>Common Mistakes to Avoid</h3>
+      <ul style={{ listStyleType: "circle" }}>
+        <li>Using too many shadows can make the text hard to read.</li>
+        <li>Overly large or blurred shadows can lead to visual clutter.</li>
+        <li>Inconsistent shadow colors can make the design look disjointed.</li>
+      </ul>
+
+      <h3>Conclusion</h3>
+      <p>
+        Text Shadow is a versatile CSS tool that can bring your text to life. From subtle enhancements to bold, glowing effects, text shadows can dramatically improve the aesthetics of your web design. Always test your text shadow designs to ensure readability and balance.
+      </p>
+
+      <h2>Example Button with Text Shadow</h2>
+      <Button className="button my-4" style={{ textShadow: '2px 2px 5px rgba(0, 0, 0, 0.3)' }}>
+        Hover Over Me
+      </Button>
+
+      <h2>Example Heading with Multiple Shadows</h2>
+      <Card className="card my-4" style={{ textShadow: '3px 3px 5px rgba(0, 0, 0, 0.4), -3px -3px 5px rgba(255, 255, 255, 0.4)' }}>
+        <Card.Body>
+          This heading has multiple shadows.
+        </Card.Body>
+      </Card>
+    </Container>
+
     </Container>
   );
 };

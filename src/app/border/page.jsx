@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import { Button, Col, Container, Form, Row, Card } from 'react-bootstrap';
 import { ToastContainer, toast } from "react-toastify";
 
 const Border = () => {
@@ -203,6 +203,139 @@ const Border = () => {
           </div>
         </Col>
       </Row>
+
+      <Container className='mt-5 pt-5'>
+      <h1 className='text-center mb-3'>CSS Border: Styling the Edges of Your Elements</h1>
+      <p>
+        The <strong>CSS Border</strong> property allows you to define the border around an HTML element. It provides an easy way to visually separate content, define areas of a page, and create distinct shapes. Borders can be styled in various ways to suit the design and enhance the user experience.
+      </p>
+
+      <h2>Why is the Border Important?</h2>
+      <p>
+        Borders help to visually delineate areas of a web page. Whether you’re creating a button, card, or section, borders can add definition and structure to your elements. Borders can also enhance the aesthetic appeal of your design, making it look polished and professional.
+      </p>
+
+      <ul style={{ listStyleType: "circle" }}>
+        <li>Borders define the edges of an element, making it stand out.</li>
+        <li>They help organize content and improve readability.</li>
+        <li>Using styled borders can add emphasis to important elements, like buttons and forms.</li>
+      </ul>
+
+      <h2>How to Use Borders in CSS</h2>
+      <p>The basic syntax of the <code>border</code> property looks like this:</p>
+      <pre>
+        <code>
+          {`element {
+  border: width style color;
+}`}
+        </code>
+      </pre>
+
+      <p><strong>Here’s a breakdown:</strong></p>
+      <ul style={{ listStyleType: "circle" }}>
+        <li><strong>width</strong>: Specifies the thickness of the border (e.g., <code>1px</code>, <code>2px</code>, etc.).</li>
+        <li><strong>style</strong>: Defines the style of the border (e.g., <code>solid</code>, <code>dashed</code>, <code>dotted</code>, etc.).</li>
+        <li><strong>color</strong>: Specifies the color of the border (e.g., <code>red</code>, <code>#000000</code>, etc.).</li>
+      </ul>
+
+      <h3>Examples</h3>
+      <Row>
+        <Col className='border-dark border p-3 my-3'>
+          <h4>Solid Border</h4>
+          <pre>
+            <code>
+              {`.box {
+  border: 2px solid #007bff;
+}`}
+            </code>
+          </pre>
+        </Col>
+
+        <Col className='border-dark border p-3 my-3'>
+          <h4>Dashed Border</h4>
+          <pre>
+            <code>
+              {`.card {
+  border: 3px dashed #ff5733;
+}`}
+            </code>
+          </pre>
+        </Col>
+
+        <Col className='border-dark border p-3 my-3'>
+          <h4>Dotted Border</h4>
+          <pre>
+            <code>
+              {`.dotted-box {
+  border: 1px dotted #00bcd4;
+}`}
+            </code>
+          </pre>
+        </Col>
+      </Row>
+
+      <h3>Advanced Border Techniques</h3>
+      <h4>Border Radius</h4>
+      <p>The <code>border-radius</code> property allows you to create rounded corners for elements:</p>
+      <pre>
+        <code>
+          {`.rounded-box {
+  border: 2px solid #007bff;
+  border-radius: 10px;
+}`}
+        </code>
+      </pre>
+
+      <h4>Border with Different Sides</h4>
+      <p>You can specify different borders for each side of an element:</p>
+      <pre>
+        <code>
+          {`.custom-box {
+  border-top: 2px solid #007bff;
+  border-right: 3px dashed #ff5733;
+  border-bottom: 4px dotted #00bcd4;
+  border-left: 1px solid #000000;
+}`}
+        </code>
+      </pre>
+
+      <h3>Tips for Using CSS Border</h3>
+      <ul style={{ listStyleType: "circle" }}>
+        <li>Use borders sparingly to avoid overwhelming the design.</li>
+        <li>Combine <code>border-radius</code> with borders for smooth, modern designs.</li>
+        <li>Consider using subtle borders (like <code>1px solid</code>) for elements like inputs or cards.</li>
+        <li>Use contrasting border colors to make interactive elements, like buttons, stand out.</li>
+      </ul>
+
+      <h3 className='text-center'>Common Mistakes to Avoid</h3>
+      <ul style={{ listStyleType: "circle" }}>
+        <li>Using heavy borders on small elements can create a cluttered look.</li>
+        <li>Inconsistent border styles (mixing dashed, dotted, etc.) can make the design appear unorganized.</li>
+        <li>Using too many borders around content can make the layout feel rigid and boxed in.</li>
+      </ul>
+
+      <h3>Conclusion</h3>
+      <p>
+        Borders are a simple but effective way to style HTML elements. Whether you’re using solid, dashed, or dotted borders, they help in defining areas of a page and drawing attention to important elements. Experiment with border styles and <code>border-radius</code> to achieve modern, clean designs that enhance your user interface.
+      </p>
+
+      <h2>Example Button with Border</h2>
+      <Button className="button my-4" style={{ border: '2px solid #007bff', borderRadius: '5px' }}>
+        Click Me
+      </Button>
+
+      <h2>Example Card with Dashed Border</h2>
+      <Card className="card my-4" style={{ border: '3px dashed #ff5733' }}>
+        <Card.Body>
+          This card has a dashed border.
+        </Card.Body>
+      </Card>
+
+      <h2>Example Box without Dotted Border</h2>
+      <div className="border border-dark p-4">
+        This box has a dotted border.
+      </div>
+    </Container>
     </Container>
   );
 };

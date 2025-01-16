@@ -4,25 +4,25 @@ function Footer(){
     return(
         
      <footer
-     className="bg-dark text-light py-4 mt-5"
+     className="bg-light text-dark py-4 mt-5"
      data-aos="fade-up"
      data-aos-delay="500"
    >
      <Container>
        <Row>
          <Col md={6}>
-           <h5>CSS Generator</h5>
+           <h5 className='font-weight-bold text-info  '>CSS World</h5>
            <p>Effortless CSS styling at your fingertips.</p>
          </Col>
          <Col md={6} className="text-md-end">
            <Nav className="justify-content-end">
-             <Nav.Link href="#gradient-generator" className="text-light">
+             <Nav.Link href="#gradient-generator" className="text-info font-weight-bold">
                Gradient Generator
              </Nav.Link>
-             <Nav.Link href="#gallery" className="text-light">
+             <Nav.Link href="#gallery" className="text-info font-weight-bold">
                Gallery
              </Nav.Link>
-             <Nav.Link href="#contact" className="text-light">
+             <Nav.Link href="#contact" className="text-info font-weight-bold">
                Contact
              </Nav.Link>
            </Nav>

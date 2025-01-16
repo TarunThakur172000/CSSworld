@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import { Col, Container, Row, Button, Form } from 'react-bootstrap';
+import { Col, Container, Row, Button, Form, Card } from 'react-bootstrap';
 import { ToastContainer, toast } from "react-toastify";
 const CssCursor = () => {
   const [cursorType, setCursorType] = useState('default');
@@ -123,6 +123,137 @@ const CssCursor = () => {
           </div>
         </Col>
       </Row>
+      <Container className='mt-5 pt-5'>
+      <h1 className='text-center mb-3'>CSS Cursor: Enhance User Interaction with Custom Cursors</h1>
+      <p>
+        <strong>CSS Cursor</strong> is a property that controls the type of cursor to be displayed when hovering over an element. It helps in guiding the user’s expectations of the interactivity of a particular element, providing a more intuitive and engaging user experience.
+      </p>
+
+      <h2>Why is the Cursor Important?</h2>
+      <p>
+        The cursor indicates to users whether an element is interactive. Using the right cursor type can give users immediate feedback on what actions they can perform, improving usability and the overall feel of the web application.
+      </p>
+
+      <ul style={{ listStyleType: "circle" }}>
+        <li>Custom cursors can make buttons and links stand out more.</li>
+        <li>Different cursor styles help indicate specific interactions, like clicking or dragging.</li>
+        <li>A well-designed cursor improves the overall user experience and makes the interface feel responsive.</li>
+      </ul>
+
+      <h2>How to Use Cursor in CSS</h2>
+      <p>The basic syntax of the <code>cursor</code> property looks like this:</p>
+      <pre>
+        <code>
+          {`element {
+  cursor: value;
+}`}
+        </code>
+      </pre>
+
+      <p><strong>Here’s a breakdown:</strong></p>
+      <ul style={{ listStyleType: "circle" }}>
+        <li><strong>value</strong>: Specifies the type of cursor to display. It can be a predefined keyword, a URL to an image, or other options.</li>
+      </ul>
+
+      <h3>Common Cursor Types</h3>
+      <ul style={{ listStyleType: "circle" }}>
+        <li><code>default</code>: The default cursor (arrow).</li>
+        <li><code>pointer</code>: A hand icon (used for clickable items like links and buttons).</li>
+        <li><code>crosshair</code>: A crosshair cursor (used for drawing or precise actions).</li>
+        <li><code>move</code>: Indicates that the element can be moved.</li>
+        <li><code>text</code>: Indicates that the element is text (usually for selectable text).</li>
+        <li><code>wait</code>: Indicates that the application is busy (usually a spinning wheel).</li>
+      </ul>
+
+      <h3>Examples</h3>
+      <Row>
+        <Col className='border-dark border p-3 my-3'>
+          <h4>Default Cursor</h4>
+          <pre>
+            <code>
+              {`.default-cursor {
+  cursor: default;
+}`}
+            </code>
+          </pre>
+        </Col>
+
+        <Col className='border-dark border p-3 my-3'>
+          <h4>Pointer Cursor</h4>
+          <pre>
+            <code>
+              {`.button {
+  cursor: pointer;
+}`}
+            </code>
+          </pre>
+        </Col>
+
+        <Col className='border-dark border p-3 my-3'>
+          <h4>Move Cursor</h4>
+          <pre>
+            <code>
+              {`.draggable {
+  cursor: move;
+}`}
+            </code>
+          </pre>
+        </Col>
+      </Row>
+
+      <h3>Tips for Using CSS Cursor</h3>
+      <ul style={{ listStyleType: "circle" }}>
+        <li>Use <code>pointer</code> cursor for clickable items to indicate interactivity.</li>
+        <li>Don't overuse custom cursors. Stick to standard ones unless you have a good reason to customize them.</li>
+        <li>Test your cursors to make sure they work well on all screen sizes and devices.</li>
+        <li>When using custom images as cursors, ensure they are clear and appropriately sized.</li>
+      </ul>
+
+      <h3 className='text-center'>Advanced Techniques</h3>
+      <h4>Custom Cursors with Images</h4>
+      <p>You can use custom images as cursors by providing a URL to an image:</p>
+      <pre>
+        <code>
+          {`.custom-cursor {
+  cursor: url('cursor-image.png'), auto;
+}`}
+        </code>
+      </pre>
+
+      <h4>Dynamic Cursors for Interactions</h4>
+      <p>Use CSS to dynamically change the cursor type during interactions (e.g., hovering over an editable area).</p>
+      <pre>
+        <code>
+          {`.editable:hover {
+  cursor: text;
+}`}
+        </code>
+      </pre>
+
+      <h3>Common Mistakes to Avoid</h3>
+      <ul style={{ listStyleType: "circle" }}>
+        <li>Don’t use too many different custom cursors, as it can confuse users.</li>
+        <li>Ensure that custom cursor images are not too large or too small, which can lead to a poor user experience.</li>
+        <li>Always provide a fallback cursor value (like <code>auto</code>) when using custom images.</li>
+      </ul>
+
+      <h3>Conclusion</h3>
+      <p>
+        The <code>cursor</code> property in CSS may seem small, but it plays an essential role in improving the overall user experience. By customizing the cursor appropriately, you guide users through interactive elements and enhance usability. Experiment with different cursor styles to see how they can complement your web design.
+      </p>
+
+      <h2>Example Button with Pointer Cursor</h2>
+      <Button className="button my-4" style={{ cursor: 'pointer' }}>
+        Hover Over Me
+      </Button>
+
+      <h2>Example Div with Move Cursor</h2>
+      <Card className="card my-4" style={{ cursor: 'move' }}>
+        <Card.Body>
+          This card has a move cursor for dragging.
+        </Card.Body>
+      </Card>
+    </Container>
     </Container>
   );
 };

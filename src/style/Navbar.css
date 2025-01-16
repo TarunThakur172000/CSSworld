@@ -28,10 +28,13 @@
   color: white;
   text-decoration: none;
   transition: color 0.3s;
+  font-weight: 600;
 }
 
 .navbar-menu li a:hover {
-  color: #ff6f61;
+  color: wheat;
+  text-decoration: underline;
+
 }
 
 /* React Burger Menu Styles */
@@ -80,7 +83,24 @@
   .desktop-menu{
     display: none !important;
   }
+  #outer-container{
+    height: 5rem;
+  }
+  .bm-burger-bars{
+    background: #fff !important;
+  }
+  .bm-overlay{
+    background: rgb(138 144 227 / 20%) !important;
+    right: -13px;
+  }
+  .bm-menu{
+    background-color: #5f628d !important;
+  }
+  .bm-menu-wrap{
+    top:5rem
+  }
 }
+
 
 
 
