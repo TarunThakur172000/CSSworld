@@ -20,6 +20,19 @@ const Border = () => {
     else if (id === 'borderRadius') setBorderRadius(value);
   };
 
+  const resetCSS = () => {
+    setBorderWidth(5);
+    setBorderStyle('solid');
+    setBorderColor('#000000');
+    setBorderRadius(10);
+    setTopLeftRadius(10);
+    setTopRightRadius(10);
+    setBottomLeftRadius(10);
+    setBottomRightRadius(10);
+    toast.info("CSS code reset")
+  };
+  
+
   const handleBorderStyleChange = (e) => {
     setBorderStyle(e.target.value);
   };
@@ -64,10 +77,19 @@ const Border = () => {
       <ToastContainer
       position="bottom-right"/>
       <h1 className="text-center mb-5">CSS Border Generator</h1>
+      
       <Row className="gap-4">
         {/* CSS Editor Section */}
         <Col md={4}>
+        <Row>
+        <Col>
           <h3>CSS Editor</h3>
+          </Col>
+          <Col>
+        <Button className='w-100 btn btn-dark btn-col' onClick={resetCSS}>Reset</Button>
+        </Col>
+      
+          </Row>
           <div className="mb-3">
             <label>Border Width: {borderWidth}px</label>
             <input
@@ -175,12 +197,11 @@ const Border = () => {
         <Col md={4}>
           <h3>Generated CSS:</h3>
           <textarea
-            readOnly
-            value={`border: ${borderCSS}; \nborder-radius: ${borderRadiusCSS};`}
+            defaultValue={`border: ${borderCSS}; \nborder-radius: ${borderRadiusCSS};`}
             rows="4"
             className="form-control mb-3"
           />
-          <Button onClick={copyToClipboard} className="btn btn-primary w-100">
+          <Button onClick={copyToClipboard} className="btn btn-primary w-100 btn-col">
             Copy CSS
           </Button>
         </Col>

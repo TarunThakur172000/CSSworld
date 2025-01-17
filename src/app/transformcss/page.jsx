@@ -31,6 +31,22 @@ const TransformCss = () => {
     return transformString.trim();
   };
 
+  const resetCSS = () => {
+    setTranslateX(0); // Reset translateX
+    setTranslateY(0); // Reset translateY
+    setTranslateZ(0); // Reset translateZ
+    setRotate(0); // Reset rotate
+    setRotateX(0); // Reset rotateX
+    setRotateY(0); // Reset rotateY
+    setScaleX(1); // Reset scaleX
+    setScaleY(1); // Reset scaleY
+    setSkewX(0); // Reset skewX
+    setSkewY(0); // Reset skewY
+    setPerspective(500); // Reset perspective
+    toast.info("CSS code reset");
+  };
+
+  
   const copyToClipboard = () => {
     navigator.clipboard.writeText(`transform: ${generateTransformCSS()};`).then(() => {
       toast.success(`Copied: ${generateTransformCSS()}`);
@@ -41,8 +57,17 @@ const TransformCss = () => {
     <Container className="mt-5" style={{overflow:"hidden"}}>
         <ToastContainer
             position="bottom-right"/>
-      <h1 className="text-center mb-5">CSS Transform Generator</h1>
+        <Row>
+              <Col>
+                  
+                  <h1 className="text-center mb-5">CSS Transform Generator</h1>
+              </Col>
+               <Col> 
+                  <Button className='w-100 btn btn-dark btn-col' onClick={resetCSS}>Reset</Button>
+              </Col>
+          </Row>
       <Row className="gap-4">
+         
           <h3>Transform Editor</h3>
         <Col md={4} style={{overflowY:"scroll",height:"50vh"}}>
 
@@ -180,7 +205,7 @@ const TransformCss = () => {
             rows="6"
             className="form-control mb-3"
           />
-           <Button onClick={copyToClipboard} className="btn btn-primary w-100">
+           <Button onClick={copyToClipboard} className="btn btn-primary w-100 btn-col">
             Copy CSS
           </Button>
         </Col>

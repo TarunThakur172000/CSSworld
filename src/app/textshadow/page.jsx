@@ -17,6 +17,15 @@ const TextShadow = () => {
     else if (id === 'blur') setBlur(value);
   };
 
+  const resetCSS = () => {
+    setHorizontal(10); // Default horizontal offset
+    setVertical(10); // Default vertical offset
+    setBlur(15); // Default blur radius
+    setColor("#000000"); // Default shadow color
+    setInset(false); // Default inset value
+    toast.info("CSS code reset");
+  };
+  
   // Function to handle changes in color and inset checkbox
   const handleChange = (e) => {
     const { id, value, type, checked } = e.target;
@@ -47,7 +56,14 @@ const TextShadow = () => {
       <Row className="gap-4">
         {/* CSS Editor Section */}
         <Col md={4}>
-          <h3>CSS Editor</h3>
+          <Row>
+              <Col>
+                  <h3>CSS Editor</h3>
+              </Col>
+              <Col> 
+                  <Button className='w-100 btn btn-dark btn-col' onClick={resetCSS}>Reset</Button>
+              </Col>
+          </Row>
           <div>
             <label>Horizontal Offset: {horizontal}px</label>
             <input
@@ -106,7 +122,7 @@ const TextShadow = () => {
             rows="4"
             className="form-control mb-3"
           />
-          <Button onClick={copyToClipboard} className="btn btn-primary w-100">
+          <Button onClick={copyToClipboard} className="btn btn-primary w-100 btn-col">
             Copy CSS
           </Button>
         </Col>

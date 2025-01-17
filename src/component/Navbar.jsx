@@ -6,6 +6,7 @@ import { slide as Menu } from "react-burger-menu";
 import "../style/Navbar.css";
 import ham from '../app/res/Hamburger.svg'
 import Switch from "@/app/res/Switch";
+
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
@@ -38,6 +39,7 @@ const Navbar = () => {
         <li><Link href="/rgbanhexcolor" prefetch={true}>RGBA & Hex Color</Link></li>
         <li><Link href="/multiplecol" prefetch={true}>Multiple Columns</Link></li>
         <li><Link href="/filter" prefetch={true}>Filter</Link></li>
+        <li><Link href="/scrollbar" prefetch={true}>Scrollbar</Link></li>
       </ul>
       </div>
       {/* Burger Menu for Mobile */}
@@ -63,6 +65,7 @@ const Navbar = () => {
         <Link href="/rgbanhexcolor" prefetch={true} onClick={() => setMenuOpen(false)}>RGBA & Hex Color</Link>
         <Link href="/multiplecol" prefetch={true} onClick={() => setMenuOpen(false)}>Multiple Columns</Link>
         <Link href="/filter" prefetch={true} onClick={() => setMenuOpen(false)}>Filter</Link>
+        <Link href="/scrollbar" prefetch={true} onClick={() => setMenuOpen(false)}>Scrollbar</Link>
         
       </Menu>
       </div>

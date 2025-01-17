@@ -43,7 +43,7 @@ const HomePage = () => {
           textAlign: "center",
         }}
       >
-        <Container>
+        <Container className="w-80">
           <h1>Welcome to CSS World</h1>
           <p>Create stunning gradients and CSS styles effortlessly!</p>
           <Button variant="light" size="lg" href="/gradientcss">

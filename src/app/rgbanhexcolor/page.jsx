@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { ToastContainer, toast } from "react-toastify";
 import ColorPallet from '../color-pallet/page'
+import {sample_pallet} from '../color-pallet/colorPalettes'
+
 
 const RgbaHexColor = () => {
   const [rgb, setRgb] = useState({ r: 255, g: 255, b: 255, a: 1 });
@@ -15,6 +17,13 @@ const RgbaHexColor = () => {
       value.toString(16).padStart(2, "0").toUpperCase();
     return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
   };
+
+  const resetCSS=()=>{
+    setRgb({ r: 255, g: 255, b: 255, a: 1 });
+    setHex("#0075ff");
+    toast.info("CSS code reset");
+
+  }
 
   // Convert RGBA to HEX
   const rgbaToHex = (r, g, b, a) => {
@@ -85,7 +94,15 @@ const RgbaHexColor = () => {
     <Container className="mt-5">
        <ToastContainer
            position="bottom-right"/>
-      <h1 className="text-center mb-4">RGB and HEX Color Converter</h1>
+
+           <Row>
+                <Col>
+                     <h1 className="text-center mb-4">RGB and HEX Color Converter</h1>
+                </Col>
+                 <Col> 
+                    <Button className='w-100 btn btn-dark btn-col' onClick={resetCSS}>Reset</Button>
+                </Col>
+            </Row>
       <Row className="gap-4">
         {/* RGB Input Section */}
         <Col md={4}>
@@ -151,7 +168,7 @@ const RgbaHexColor = () => {
               value={hex}
               onChange={handleHexChange}
             />
-            <Button onClick={()=>{copyToClipboard(hex)}}>Copy</Button>
+            <Button onClick={()=>{copyToClipboard(hex)}} className="btn btn-primary w-100 btn-col">Copy</Button>
           </Form.Group>
 
           {error && <p className="text-danger">{error}</p>}
@@ -180,7 +197,8 @@ const RgbaHexColor = () => {
           </p>
         </Col>
       </Row>
-      <ColorPallet/>
+      <ColorPallet pallets={sample_pallet}/>
+      
     </Container>
   );
 };

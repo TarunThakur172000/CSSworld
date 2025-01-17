@@ -19,6 +19,21 @@ const GradientGenerator = () => {
     setColorStops([...colorStops, Math.min(100, colorStops[colorStops.length - 1] + 10)]);
   };
 
+
+  const resetCSS = () => {
+    setColors(["#9B4D97", "#4C2A84"]); // Initial two colors
+    setDirection("to right");
+    setGradientType("linear");
+    setAngle(45);
+    setRepeat(false);
+    setColorStops([0, 50]); // Default color stops
+    setShape("circle"); // Default for radial gradients
+    setSize("farthest-corner"); // Default size for radial gradients
+    setPosition("center"); // Default position for radial gradients
+    toast.info("CSS code reset");
+  };
+
+
   const removeColor = (index) => {
     setColors(colors.filter((_, i) => i !== index));
     setColorStops(colorStops.filter((_, i) => i !== index));
@@ -68,9 +83,19 @@ const GradientGenerator = () => {
     <Container className="mt-5">
       <ToastContainer
                   position="bottom-right"/>
-      <h1 className="text-center mb-5">CSS Gradient Generator</h1>
+
+      <Row>
+            <Col>
+                <h1 className="text-center mb-5">CSS Gradient Generator</h1>
+                
+            </Col>
+            <Col> 
+                <Button className='w-100 btn btn-dark btn-col' onClick={resetCSS}>Reset</Button>
+            </Col>
+        </Row>
       <Row className="gap-4">
         <Col md={4}>
+       
           <h3>Gradient Editor</h3>
           <div className="mb-3">
             <label>Gradient Type:</label>
@@ -220,7 +245,7 @@ const GradientGenerator = () => {
             rows="6"
             className="form-control mb-3"
           />
-          <Button onClick={copyToClipboard} className="btn btn-primary w-100">
+          <Button onClick={copyToClipboard} className="btn btn-primary w-100 btn-col">
             Copy CSS
           </Button>
         </Col>

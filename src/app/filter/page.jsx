@@ -24,6 +24,29 @@ const ImageFilterGenerator = () => {
     color: "#000000",
   });
 
+  const resetCSS = () => {
+    setFilters({
+      brightness: 100,
+      contrast: 100,
+      saturation: 100,
+      hueRotate: 0,
+      blur: 0,
+      invert: 0,
+      grayscale: 0,
+      sepia: 0,
+    });
+  
+    setShadow({
+      offsetX: 0,
+      offsetY: 0,
+      blur: 5,
+      spread: 0,
+      color: "#000000",
+    });
+    toast.info("CSS code reset");
+  };
+  
+
   const handleFilterChange = (e) => {
     const { name, value } = e.target;
     setFilters((prev) => ({
@@ -63,7 +86,15 @@ const ImageFilterGenerator = () => {
     <Container className="mt-5">
         <ToastContainer
             position="bottom-right"/>
-      <h1 className="text-center mb-4">Image Filter</h1>
+
+            <Row>
+                <Col>
+                    <h1 className="text-center mb-4">Image Filter</h1>
+                </Col>
+                <Col> 
+                    <Button className='w-100 btn btn-dark btn-col' onClick={resetCSS}>Reset</Button>
+                </Col>
+            </Row>
       <Row>
         {/* Filters Section */}
         <Col md={4}>
@@ -284,7 +315,7 @@ const ImageFilterGenerator = () => {
           >
             {`filter: ${filterStyle};\nbox-shadow: ${dropShadow};`}
           </pre>
-          <Button onClick={copyToClipboard} className="btn btn-primary w-100">
+          <Button onClick={copyToClipboard} className="btn btn-primary w-100 btn-col">
             Copy CSS
           </Button>
         </Col>

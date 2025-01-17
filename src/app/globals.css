@@ -117,3 +117,18 @@ body {
   background: linear-gradient(180deg, #4169E1, #4682B4, #5F9EA0);
   box-shadow:  -6px 8px 14px -10px #000000;
 }
+
+
+::-webkit-scrollbar {
+  width: 5px; /* Add px unit */
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  background: #767ef5;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #525151;
+}
+  

@@ -1,12 +1,12 @@
+"use client"
 // components/GradientGallery.js
 import React, { useState } from 'react';
 import './GradientGallery.css';
 import {gradients} from './gradients'
 import { Col, Container, Row } from 'react-bootstrap';
 import { ToastContainer, toast } from "react-toastify";
-import Link from 'next/link';
 function GradientGallery() {
-  const [selectedGradient, setSelectedGradient] = useState("linear-gradient(135deg, #9B4D97, #4C2A84)");
+  const [selectedGradient, setSelectedGradient] = useState();
 
   const handleGradientClick = (gradient) => {
     setSelectedGradient(gradient);
@@ -18,22 +18,14 @@ function GradientGallery() {
   };
 
   return (
-    <div className="gradient-gallery"  >
-      <Container style={{width:"100% !important"}}>
+    <div className="gradient-gallery" >
+      <Container >
         <ToastContainer
                           position="bottom-right"/>
         <Row>
           <Col >
-          <Row>
-            <Col>
-              <h2>Gradient Gallery</h2>
-            </Col>
-            <Col>
-              <Link href="/GradiantGallery" prefetch={true}>Load more</Link>
-            </Col>
-
-          </Row>
-      <div className="gradient-list" style={{overflowY:"scroll",height:"50vh"}}>
+      <h2>Gradient Gallery</h2>
+      <div className="gradient-list" style={{overflowY:"scroll",height:"100vh"}}>
         {gradients.map((gradient, index) => (
           <div
             key={index}

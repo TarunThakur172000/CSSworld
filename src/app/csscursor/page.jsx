@@ -4,35 +4,24 @@ import { Col, Container, Row, Button, Form, Card } from 'react-bootstrap';
 import { ToastContainer, toast } from "react-toastify";
 const CssCursor = () => {
   const [cursorType, setCursorType] = useState('default');
-  const [cursorImage, setCursorImage] = useState(null);
-  const [cursorSize, setCursorSize] = useState(32);
+
   
   // Handle changes in cursor type dropdown
   const handleCursorTypeChange = (e) => {
     setCursorType(e.target.value);
   };
 
-  // Handle changes in custom image file input
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setCursorImage(reader.result);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
+  
 
-  // Handle changes in cursor size range input
-  const handleCursorSizeChange = (e) => {
-    setCursorSize(e.target.value);
-  };
+  const resetCSS = () => {
+       setCursorType('default');
+        toast.info("CSS code reset")
+      };
+
+ 
 
   // Generate the cursor CSS string
-  const cursorCSS = cursorImage
-    ? `url(${cursorImage}) ${cursorSize}px ${cursorSize}px, ${cursorType}`
-    : cursorType;
+  const cursorCSS = cursorType;
 
   // Function to copy the CSS to clipboard
   const copyToClipboard = () => {
@@ -53,7 +42,12 @@ const CssCursor = () => {
       <Row className="gap-4">
         {/* CSS Editor Section */}
         <Col md={4}>
-          <h3>CSS Editor</h3>
+         <Row>
+                 <Col>
+                   <h3>CSS Editor</h3>
+                 </Col>
+                 <Col> <Button className='w-100 btn btn-dark btn-col' onClick={resetCSS}>Reset</Button></Col>
+                 </Row>
           <div className="mb-3">
             <label>Cursor Type:</label>
             <Form.Control
@@ -101,7 +95,7 @@ const CssCursor = () => {
             rows="4"
             className="form-control mb-3"
           />
-          <Button onClick={copyToClipboard} className="btn btn-primary w-100">
+          <Button onClick={copyToClipboard} className="btn btn-primary w-100 btn-col">
             Copy CSS
           </Button>
         </Col>

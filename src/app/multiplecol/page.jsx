@@ -22,6 +22,16 @@ column-rule: ${columnRuleWidth}px ${columnRuleStyle} ${columnRuleColor};`)
       });
   };
 
+  const resetCSS = () => {
+    setColumnCount(1); // Default column count
+    setColumnGap(20); // Default column gap in pixels
+    setColumnRuleStyle("solid"); // Default rule style
+    setColumnRuleWidth(2); // Default rule width in pixels
+    setColumnRuleColor("#000000"); // Default rule color
+    toast.info("CSS code reset");
+  };
+  
+
   const exampleText = `
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel nulla vel velit finibus 
     pulvinar. Praesent sit amet elit non ligula convallis vehicula. Suspendisse potenti. 
@@ -33,7 +43,16 @@ column-rule: ${columnRuleWidth}px ${columnRuleStyle} ${columnRuleColor};`)
     <Container className="mt-5">
         <ToastContainer
             position="bottom-right"/>
-      <h1 className="text-center mb-4">Column Style Generator</h1>
+             <Row>
+                        <Col>
+                            
+                            
+                            <h1 className="text-center mb-4">Column Style Generator</h1>
+                        </Col>
+                        <Col> 
+                            <Button className='w-100 btn btn-dark btn-col' onClick={resetCSS}>Reset</Button>
+                        </Col>
+                    </Row>
       <Row>
         {/* Settings Section */}
         <Col md={4}>
@@ -136,7 +155,7 @@ column-rule: ${columnRuleWidth}px ${columnRuleStyle} ${columnRuleColor};`)
 column-gap: ${columnGap}px;
 column-rule: ${columnRuleWidth}px ${columnRuleStyle} ${columnRuleColor};`}
           </pre>
-          <Button onClick={copyToClipboard} className="btn btn-primary w-100">
+          <Button onClick={copyToClipboard} className="btn btn-primary w-100 btn-col">
             Copy CSS
           </Button>
         </Col>

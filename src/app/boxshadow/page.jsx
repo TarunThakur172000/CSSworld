@@ -20,6 +20,16 @@ const BoxShadow = () => {
     else if (id === 'spread') setSpread(value);
   };
 
+  const resetCSS = () => {
+     setHorizontal(10);
+     setVertical(10);
+     setBlur(15);
+     setSpread(0);
+     setColor('#000000');
+     setInset(false);
+      toast.info("CSS code reset")
+    };
+
   // Function to handle changes in color and inset checkbox
   const handleChange = (e) => {
     const { id, value, type, checked } = e.target;
@@ -42,11 +52,17 @@ const BoxShadow = () => {
     <Container className="mt-5">
         <ToastContainer
             position="bottom-right"/>
+            
       <h1 className="text-center mb-5">Box Shadow Generator</h1>
       <Row className="gap-4">
         {/* CSS Editor Section */}
         <Col md={4}>
+        <Row>
+        <Col>
           <h3>CSS Editor</h3>
+        </Col>
+        <Col> <Button className='w-100 btn btn-dark btn-col' onClick={resetCSS}>Reset</Button></Col>
+        </Row>
           <div>
             <label>Horizontal Offset: {horizontal}px</label>
             <input
@@ -134,7 +150,7 @@ const BoxShadow = () => {
             rows="4"
             className="form-control mb-3"
           />
-            <Button onClick={()=>{copyToClipboard()}} className='w-100'>Copy CSS</Button>
+            <Button onClick={()=>{copyToClipboard()}} className='btn btn-primary w-100 btn-col'>Copy CSS</Button>
         </Col>
 
         {/* Live Preview Section */}

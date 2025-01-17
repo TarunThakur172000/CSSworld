@@ -4,9 +4,10 @@ import { Container, Row, Col, Tooltip, OverlayTrigger } from "react-bootstrap";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { colorPalettes } from "./colorPalettes";
+import Link from "next/link";
 
 const ColorPaletteGallery = (props) => {
-  const [palletsCount, setPalletsCount] = React.useState(colorPalettes.length);
+  const [pallets, setPallets] = React.useState(props.pallets ? props.pallets : colorPalettes);
   
   const copyToClipboard = (color) => {
     navigator.clipboard.writeText(color).then(() => {
@@ -20,8 +21,8 @@ const ColorPaletteGallery = (props) => {
         <ToastContainer
             position="bottom-right"/>
       <h1 className="text-center mb-4">Color Palette Gallery</h1>
-      <Row>
-        {colorPalettes.map((palette, index) => (
+      <Row style={{display:"flex"}}>
+        {pallets.map((palette, index) => (
           <Col key={index} md={6} lg={4} className="mb-4">
             <div className="palette-container d-flex">
               {palette.map((color, i) => (
@@ -46,6 +47,9 @@ const ColorPaletteGallery = (props) => {
             </div>
           </Col>
         ))}
+        <Col className="text-center m-auto ">
+        {props.pallets ? <Link href='/color-pallet' prefetch={true}>Load more</Link> : ""}
+        </Col>
       </Row>
     </Container>
   );
