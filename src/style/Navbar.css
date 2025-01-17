@@ -101,7 +101,37 @@
   }
 }
 
+.bm-burger-bars{
+ 
+}
+.bm-burger-bars:nth-child(1){
+  width: 1rem;
+  display: flex;
+  justify-self: end !important;
+}
+.bm-burger-bars:nth-child(2){
+  width: 1.5rem;
+  display: flex;
+  justify-self: end !important;
+}
 
+
+.active:nth-last-child(1) {
+  display: none; /* No transition needed for display property */
+}
+
+.active:nth-last-child(2) {
+  width: 2.5rem;
+  transform: rotate(-44deg); /* Use transform for rotation */
+  transition: transform .2s ease; /* Smooth transition for rotation */
+}
+
+.active:nth-last-child(3) {
+  width: 2.5rem;
+  top: 35% !important;
+  transform: rotate(44deg); /* Use transform for rotation */
+  transition: top .2s ease, transform .2s ease; /* Smooth transition for top and rotation */
+}
 
 
 

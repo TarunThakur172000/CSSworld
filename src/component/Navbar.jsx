@@ -5,11 +5,20 @@ import Link from "next/link";
 import { slide as Menu } from "react-burger-menu";
 import "../style/Navbar.css";
 import ham from '../app/res/Hamburger.svg'
+import Switch from "@/app/res/Switch";
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const handleMenuStateChange = (state) => {
     setMenuOpen(state.isOpen);
+    const bar=document.querySelectorAll(".bm-burger-bars");
+    if(state.isOpen){
+      bar.forEach((el) => el.classList.add("active"));
+      }else{
+        bar.forEach((el) => el.classList.remove("active"));
+        }
+    
+
   };
 
   return (
@@ -33,14 +42,16 @@ const Navbar = () => {
       </div>
       {/* Burger Menu for Mobile */}
       <div className=" hamburger-menu">
-      <Menu 
-        isOpen={isMenuOpen} 
-        onStateChange={handleMenuStateChange} 
-        right
-        pageWrapId={ "page-wrap" } 
-        outerContainerId={ "outer-container" }
-      >
         
+        <Menu 
+          
+          isOpen={isMenuOpen} 
+          onStateChange={handleMenuStateChange} 
+          right
+          pageWrapId={ "page-wrap" } 
+          outerContainerId={ "outer-container" }
+        >
+          
           
         <Link href="/" prefetch={true} onClick={() => setMenuOpen(false)} >Home</Link>
         <Link href="/boxshadow" prefetch={true} onClick={() => setMenuOpen(false)}>Box Shadow</Link>
