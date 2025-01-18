@@ -28,7 +28,7 @@ export const metadata = {
     title: "CSS World - Effortless CSS Design and Tools",
     description: "Discover CSS World, your go-to online tool for effortless CSS design! Create stunning gradients, animations, shadows, and more with real-time previews and copy-ready code.",
     url: "https://css-world.netlify.app/", // Replace with your actual site URL
-    image: {logo}, // Replace with your actual image path
+    image: "https://opengraph.b-cdn.net/production/images/8016126f-9daa-45ab-a200-f0f8952c7240.png?token=hzV1TEGA5EMGSjQ0moGKBljpZQdSKuJ2qqsN7Y7gAXw&height=1024&width=1024&expires=33273199902", // Replace with your actual image path
     type: "website",
   },
 
@@ -37,7 +37,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "CSS World - Effortless CSS Design and Tools",
     description: "Discover CSS World, your go-to online tool for effortless CSS design! Create stunning gradients, animations, shadows, and more with real-time previews and copy-ready code.",
-    image: {logo}, // Replace with your actual image path
+    image: "https://opengraph.b-cdn.net/production/images/8016126f-9daa-45ab-a200-f0f8952c7240.png?token=hzV1TEGA5EMGSjQ0moGKBljpZQdSKuJ2qqsN7Y7gAXw&height=1024&width=1024&expires=33273199902", // Replace with your actual image path
   },
 
   // Favicon
