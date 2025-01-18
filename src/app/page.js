@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 import Title from 'react-vanilla-tilt';
 import { gradientGallery, gradients, tools } from "./res/cssmod";
 import Footer from "../component/Footer";
-import SEOHead from "../component/SEOHead";
+
 
 const HomePage = () => {
   const [currentGradient, setCurrentGradient] = useState(gradients[0]);
@@ -35,8 +35,7 @@ const HomePage = () => {
 
   return (
     <>
-    {/* SeoHead */}
-    <SEOHead/>
+   
       {/* Hero Section */}
       
       <div
