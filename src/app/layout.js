@@ -4,7 +4,8 @@ import "./globals.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-notifications/lib/notifications.css';
 import Navbar from "@/component/Navbar";
-
+import SEOHead from "@/component/SEOHead";
+import logo from '../app/res/Logo.png'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,15 +18,39 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "CSS World",
+  title: "CSS World - Effortless CSS Design and Tools",
   description: "Discover CSS World, your go-to online tool for effortless CSS design! Create stunning gradients, animations, shadows, and more with real-time previews and copy-ready code. Whether you're a beginner or a pro, CSS World simplifies your web development workflow. Try it now for free!",
+  keywords: "CSS, gradients, animations, web design tools, CSS shadows, web development, online CSS generator, free CSS tool",
+  author: "Tarun Thakur",
+  
+  // Open Graph (OG) metadata
+  openGraph: {
+    title: "CSS World - Effortless CSS Design and Tools",
+    description: "Discover CSS World, your go-to online tool for effortless CSS design! Create stunning gradients, animations, shadows, and more with real-time previews and copy-ready code.",
+    url: "https://css-world.netlify.app/", // Replace with your actual site URL
+    image: {logo}, // Replace with your actual image path
+    type: "website",
+  },
+
+  // Twitter Card metadata
+  twitter: {
+    card: "summary_large_image",
+    title: "CSS World - Effortless CSS Design and Tools",
+    description: "Discover CSS World, your go-to online tool for effortless CSS design! Create stunning gradients, animations, shadows, and more with real-time previews and copy-ready code.",
+    image: {logo}, // Replace with your actual image path
+  },
+
+  // Favicon
+  favicon: "/favicon.ico", // Replace with your actual favicon path
 };
+
 
 export default function RootLayout({ children }) {
  
 
   return (
     <html lang="en">
+      <SEOHead/>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         id="page-wrap"

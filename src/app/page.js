@@ -1,11 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Container, Navbar, Nav, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Title from 'react-vanilla-tilt'
+import Title from 'react-vanilla-tilt';
 import { gradientGallery, gradients, tools } from "./res/cssmod";
 import Footer from "../component/Footer";
+import SEOHead from "../component/SEOHead";
 
 const HomePage = () => {
   const [currentGradient, setCurrentGradient] = useState(gradients[0]);
@@ -34,7 +35,10 @@ const HomePage = () => {
 
   return (
     <>
+    {/* SeoHead */}
+    <SEOHead/>
       {/* Hero Section */}
+      
       <div
         style={{
           backgroundImage: "linear-gradient(to bottom, #999dd7, #6b74ff)",
