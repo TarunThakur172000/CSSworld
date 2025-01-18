@@ -27,21 +27,21 @@ export const metadata = {
   openGraph: {
     title: "CSS World - Effortless CSS Design and Tools",
     description: "Discover CSS World, your go-to online tool for effortless CSS design! Create stunning gradients, animations, shadows, and more with real-time previews and copy-ready code.",
-    url: "https://css-world.netlify.app/", // Replace with your actual site URL
-    image: "https://opengraph.b-cdn.net/production/images/8016126f-9daa-45ab-a200-f0f8952c7240.png?token=hzV1TEGA5EMGSjQ0moGKBljpZQdSKuJ2qqsN7Y7gAXw&height=1024&width=1024&expires=33273199902", // Replace with your actual image path
+    url: "https://css-world.netlify.app/",
+    image: "https://opengraph.b-cdn.net/production/images/8016126f-9daa-45ab-a200-f0f8952c7240.png?token=39AcE6SZ3vOlm3lUyZcgPKlKAf_O-ZdqYZ44CkPBLb0&height=1024&width=1024&expires=33273200526",
     type: "website",
   },
-
+  
   // Twitter Card metadata
   twitter: {
     card: "summary_large_image",
     title: "CSS World - Effortless CSS Design and Tools",
     description: "Discover CSS World, your go-to online tool for effortless CSS design! Create stunning gradients, animations, shadows, and more with real-time previews and copy-ready code.",
-    image: "https://opengraph.b-cdn.net/production/images/8016126f-9daa-45ab-a200-f0f8952c7240.png?token=hzV1TEGA5EMGSjQ0moGKBljpZQdSKuJ2qqsN7Y7gAXw&height=1024&width=1024&expires=33273199902", // Replace with your actual image path
+    image: "https://opengraph.b-cdn.net/production/images/8016126f-9daa-45ab-a200-f0f8952c7240.png?token=39AcE6SZ3vOlm3lUyZcgPKlKAf_O-ZdqYZ44CkPBLb0&height=1024&width=1024&expires=33273200526",
   },
 
   // Favicon
-  favicon: "/favicon.ico", // Replace with your actual favicon path
+  favicon: "/favicon.ico",
 };
 
 
