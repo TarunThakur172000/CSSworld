@@ -15,6 +15,8 @@ const urls = [
   { url: "/multiple-columns", lastmod: new Date().toISOString() },
   { url: "/image-filter", lastmod: new Date().toISOString() },
   { url: "/scrollbar", lastmod: new Date().toISOString() },
+  { url: "/Gradiant-Gallery", lastmod: new Date().toISOString() },
+  { url: "/color-pallet", lastmod: new Date().toISOString() },
 ];
 
 // Generate sitemap XML
