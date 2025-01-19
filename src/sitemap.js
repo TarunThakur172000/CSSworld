@@ -20,5 +20,5 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     .join("")}
 </urlset>`;
 
-fs.writeFileSync(path.join(__dirname, "public", "sitemap.xml"), sitemap, "utf8");
+fs.writeFileSync(path.join(__dirname, "app", "sitemap.xml"), sitemap, "utf8");
 console.log("Sitemap generated!");
