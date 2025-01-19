@@ -16,7 +16,7 @@ function Footer(){
          </Col>
          <Col md={6} className="text-md-end">
            <Nav className="justify-content-end">
-             <Nav.Link href="#gradient-generator" className="text-info font-weight-bold">
+             <Nav.Link href="/gradient-css" className="text-info font-weight-bold">
                Gradient Generator
              </Nav.Link>
              <Nav.Link href="#gallery" className="text-info font-weight-bold">

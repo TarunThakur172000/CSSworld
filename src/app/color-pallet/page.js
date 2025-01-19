@@ -47,7 +47,7 @@ const ColorPaletteGallery = (props) => {
             </div>
           </Col>
         ))}
-        <Col className="text-center m-auto ">
+        <Col className="text-left m-auto ">
         {props.pallets ? <Link href='/color-pallet' prefetch={true}>Load more</Link> : ""}
         </Col>
       </Row>
