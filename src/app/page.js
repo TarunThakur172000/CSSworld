@@ -170,7 +170,7 @@ const HomePage = () => {
           data-aos="zoom-in"
           data-aos-delay="100">
             <Title  style={{}} className="my-4">
-        <Button variant="dark" size="lg" href="/boxshadow" className="p-5 w-100 btn-col">
+        <Button variant="dark" size="lg" href="/box-shadow" className="p-5 w-100 btn-col">
                   Box Shadow
           </Button>
           </Title>
@@ -180,7 +180,7 @@ const HomePage = () => {
         data-aos="zoom-out"
         data-aos-delay="100">
           <Title  style={{}} className="my-4">
-        <Button variant="dark" size="lg"  href="/textshadow" className="p-5 w-100 btn-col">
+        <Button variant="dark" size="lg"  href="/text-shadow" className="p-5 w-100 btn-col">
             Text Shadow
           </Button>
           </Title>
@@ -189,7 +189,7 @@ const HomePage = () => {
         data-aos="zoom-in"
         data-aos-delay="100">
           <Title  style={{}} className="my-4">
-        <Button variant="dark" size="lg" href="/csscursor" className="p-5 w-100 btn-col">
+        <Button variant="dark" size="lg" href="/css-cursor" className="p-5 w-100 btn-col">
             CSS cursor
           </Button>
           </Title>
@@ -209,7 +209,7 @@ const HomePage = () => {
         data-aos="zoom-out"
         data-aos-delay="100">
           <Title  style={{}} className="my-4">
-        <Button variant="dark" size="lg"  href="/gradientcss" className="p-5 w-100 btn-col">
+        <Button variant="dark" size="lg"  href="/gradient-css" className="p-5 w-100 btn-col">
             Gradient Generator
           </Button>
           </Title>
@@ -218,7 +218,7 @@ const HomePage = () => {
         data-aos="zoom-in"
         data-aos-delay="100">
           <Title  style={{}} className="my-4">
-        <Button variant="dark" size="lg" href="/transformcss" className="p-5 w-100 btn-col">
+        <Button variant="dark" size="lg" href="/transform-css" className="p-5 w-100 btn-col">
             Transform CSS
           </Button>
           </Title>
@@ -229,7 +229,7 @@ const HomePage = () => {
           data-aos="zoom-in"
           data-aos-delay="100">
             <Title  style={{}} className="my-4">
-        <Button variant="dark" size="lg" href="/rgbanhexcolor" className="p-5 w-100 btn-col">
+        <Button variant="dark" size="lg" href="/rgba-and-hex-color" className="p-5 w-100 btn-col">
             RGBA and HEX Color
           </Button>
           </Title>
@@ -238,7 +238,7 @@ const HomePage = () => {
         data-aos="zoom-out"
         data-aos-delay="100">
           <Title style={{}} className="my-4">
-        <Button variant="dark" size="lg"  href="/multiplecol" className="p-5 w-100 btn-col">
+        <Button variant="dark" size="lg"  href="/multiple-columns" className="p-5 w-100 btn-col">
             Multiple COL
           </Button>
           </Title>
@@ -247,7 +247,7 @@ const HomePage = () => {
         data-aos="zoom-in"
         data-aos-delay="100">
           <Title style={{}} className="my-4">
-        <Button variant="dark" size="lg" href="/filter" className="p-5 w-100 btn-col">
+        <Button variant="dark" size="lg" href="/image-filter" className="p-5 w-100 btn-col">
             Image Filter
           </Button>
           </Title>
